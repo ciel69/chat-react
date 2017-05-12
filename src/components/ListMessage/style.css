@@ -1,0 +1,118 @@
+.list-message {
+    width: 100%;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 50px;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+
+.list-message__empty {
+    text-align: center;
+    line-height: 35pt;
+    color: #cccccc;
+}
+
+.list-message__you {
+    float: right;
+    text-align: right;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.list-message__not-you {
+    float: left;
+    text-align: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.list-message__not-you:before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #cccccc;
+    float: left;
+}
+
+.list-message__text {
+    display: block;
+    padding: 5px 15px;
+    float: inherit;
+    margin: 10px 0;
+    position: relative;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.list-message__not-you .list-message__text {
+    margin-left: 10px;
+}
+
+.list-message__you .list-message__text {
+    margin-right: 10px;
+}
+
+.list-message__not-you .list-message__text:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 10px;
+    margin-top: -10px;
+}
+
+.list-message__not-you .list-message__text:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-right-color: #ccc;
+    border-width: 11px;
+    margin-top: -11px;
+}
+
+.list-message__you .list-message__text:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #fff;
+    border-width: 10px;
+    margin-top: -10px;
+}
+
+.list-message__you .list-message__text:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-left-color: #ccc;
+    border-width: 11px;
+    margin-top: -11px;
+}
+
+.list-message__you:before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #cccccc;
+    float: right;
+}
+
+.list-message__text:after,
+.list-message__text:before {
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+}
+
+.list-message__you .list-message__text:after,
+.list-message__you .list-message__text:before {
+    left: 100%;
+}
+
+.list-message__not-you .list-message__text:after,
+.list-message__not-you .list-message__text:before {
+    right: 100%;
+}

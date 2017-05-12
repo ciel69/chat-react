@@ -1,0 +1,9 @@
+.chat-form__input{
+    width: 75%;
+    margin-right: 15px;
+    float: left;
+}
+.chat-form__submit{
+    width: 20%;
+    float: right;
+}
