@@ -20,4 +20,3 @@ const Сomponent = () => (
 );
 
 ReactDOM.render(<Сomponent />, document.getElementById('root'));
-registerServiceWorker();
