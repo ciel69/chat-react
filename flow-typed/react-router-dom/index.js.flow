@@ -1,0 +1,11 @@
+declare module 'react-router-dom' {
+  declare export var withRouter: any;
+
+  declare export var Link: any;
+
+  declare export var Route: any;
+
+  declare export var Router: any;
+
+  declare export var Switch: any;
+}

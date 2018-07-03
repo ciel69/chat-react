@@ -1,0 +1,40 @@
+import {Action, Dispatch} from "redux";
+
+declare module 'redux' {
+  declare export type State<T> = () => T;
+
+  declare export type Dispatch = (action: Action) => any;
+
+  declare export interface Middleware {}
+
+  declare export interface MiddlewareAPI {}
+  declare export interface Action {
+      type: any;
+      payload?: any;
+  }
+
+  declare export interface Store {
+      dispatch: Dispatch;
+      getState(): any;
+      replaceReducer(): any;
+      subscribe(): any;
+  }
+
+  declare interface CreateStore {
+    (reducers: any, enhancer: any): Store;
+    (reducers: any, initialState: any, enhancer: any): Store;
+  }
+
+  declare export function applyMiddleware(...middleware: Store[]): any;
+
+  declare export function bindActionCreators(
+    action: any,
+    dispatch: Dispatch
+  ): any;
+
+  declare export function combineReducers(reducers: any): any;
+
+  declare export function compose(): any;
+
+  declare export var createStore: CreateStore;
+}

@@ -1,0 +1,35 @@
+[ignore]
+.*\/node_modules\/rc-util\/.*
+.*\/node_modules\/react-router\/.*
+.*\/node_modules\/react-router-dom\/.*
+.*\/app/.*
+
+[include]
+./src/
+
+[libs]
+./flow-typed
+
+[lints]
+
+[options]
+esproposal.class_instance_fields=ignore
+esproposal.class_static_fields=ignore
+esproposal.decorators=ignore
+
+module.name_mapper='^/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
+module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^reducers\/\(.*\)$' -> '<PROJECT_ROOT>/src/reducers/\1'
+module.name_mapper='^actions\/\(.*\)$' -> '<PROJECT_ROOT>/src/actions/\1'
+module.name_mapper='^constants\/\(.*\)$' -> '<PROJECT_ROOT>/src/constants/\1'
+module.name_mapper='^containers\/\(.*\)$' -> '<PROJECT_ROOT>/src/containers/\1'
+
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.css
+module.file_ext=.scss
+
+module.system=haste
+
+[strict]

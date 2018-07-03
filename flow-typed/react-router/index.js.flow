@@ -1,0 +1,7 @@
+declare module 'react-router' {
+  declare export interface RouteComponentProps {
+    history: Object;
+    location: Object;
+    match: Object;
+  }
+}

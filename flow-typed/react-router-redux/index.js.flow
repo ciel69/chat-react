@@ -1,0 +1,5 @@
+declare module 'react-router-redux' {
+  declare export interface RouterReducer {}
+
+  declare export var routerReducer: RouterReducer;
+}

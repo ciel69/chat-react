@@ -1,0 +1,39 @@
+declare module 'react-redux' {
+  declare type MapStateToPropsParam<TStateProps, TOwnProps, State> = {};
+
+  declare type MapDispatchToPropsParam<TDispatchProps, TOwnProps> = {};
+
+  declare type MergeProps = {};
+
+  declare type Options = {};
+
+  declare interface Connect {
+    (): any;
+
+    <TStateProps, TDispatchProps, TOwnProps, State>(
+      mapStateToProps: MapStateToPropsParam<TStateProps, TOwnProps, State>
+    ): any;
+
+    <TStateProps, TDispatchProps, TOwnProps, State>(
+      mapStateToProps: MapStateToPropsParam<TStateProps, TOwnProps, State>,
+      mapDispatchToProps: MapDispatchToPropsParam<TDispatchProps, TOwnProps>
+    ): any;
+
+    <TStateProps, TDispatchProps, TOwnProps, State>(
+      mapStateToProps: MapStateToPropsParam<TStateProps, TOwnProps, State>,
+      mapDispatchToProps: MapDispatchToPropsParam<TDispatchProps, TOwnProps>,
+      mergeProps: MergeProps
+    ): any;
+
+    <TStateProps, TDispatchProps, TOwnProps, State>(
+      mapStateToProps: MapStateToPropsParam<TStateProps, TOwnProps, State>,
+      mapDispatchToProps: MapDispatchToPropsParam<TDispatchProps, TOwnProps>,
+      mergeProps: MergeProps,
+      options: Options
+    ): any;
+  }
+
+  declare export var connect: Connect;
+
+  declare export var Provider: any;
+}

@@ -1,26 +1,29 @@
-import {
-    GET_MESSAGE_SUCCESS,
-    ON_MESSAGE
+import { GET_MESSAGE_SUCCESS, ON_MESSAGE } from '../constants/Messages';
 
-} from '../constants/Messages';
+export interface IMessage {
+  you: boolean;
+  text: string;
+}
 
-const initialState = {
-    messages: [],
-    onMessage: false
+export type TypeChat = {
+  messages: IMessage[],
+  onMessage: boolean,
 };
 
-export default function (state = initialState, action) {
+const initialState: TypeChat = {
+  messages: [],
+  onMessage: false,
+};
 
-    switch (action.type) {
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case GET_MESSAGE_SUCCESS:
+      return { ...state, messages: [...state.messages, action.value] };
 
-        case GET_MESSAGE_SUCCESS:
-            return {...state, messages: [...state.messages, action.value]};
+    case ON_MESSAGE:
+      return { ...state, onMessage: action.value };
 
-        case ON_MESSAGE:
-            return {...state, onMessage: action.value};
-
-        default:
-            return state;
-    }
-
+    default:
+      return state;
+  }
 }
