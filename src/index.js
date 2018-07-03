@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { ConnectedRouter } from 'connected-react-router';
 
-import configureStore from './store/configureStore';
+import configureStore from 'store/configureStore';
 import Routes from './Routes';
 
 const store = configureStore();
